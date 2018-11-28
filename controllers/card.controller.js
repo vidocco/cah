@@ -26,5 +26,11 @@ module.exports = {
     }
 
     return res.status(200).json(result)
+  },
+  getRandom: (req, res) => {
+    const color = Math.random() >= 0.5 ? 'whiteCards' : 'blackCards'
+    const id = Math.floor(Math.random() * Cards[color].length)
+
+    return res.status(200).json({ card: Cards[color][id] })
   }
 }

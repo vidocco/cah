@@ -4,7 +4,6 @@ const cardController = require('./controllers/card.controller')
 
 router
   .get('/cards', cardController.getCards)
-  .get('/cards/:id', () => {})
-  .get('/cards/random', () => {})
+  .get('/cards/random', cardController.getRandom)
 
 module.exports = router
