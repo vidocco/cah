@@ -7,6 +7,6 @@ const cors = require('cors')
 app
   .use(cors())
   .use(express.json())
-  .use(express.urlencoded())
+  .use(express.urlencoded({ extended: true }))
   .use(router)
   .listen(3000, () => console.log('app listening in port 3000'))
