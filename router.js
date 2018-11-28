@@ -1,7 +1,9 @@
 const router = require('express').Router()
 
+const cardController = require('./controllers/card.controller')
+
 router
-  .get('/cards', () => {})
+  .get('/cards', cardController.getCards)
   .get('/cards/:id', () => {})
   .get('/cards/random', () => {})
 
